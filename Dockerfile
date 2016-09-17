@@ -28,7 +28,4 @@ RUN cd && \
 	rm -rf ./* && \
 	ln -s ~/.local/bin/crux /usr/local/bin/crux
 
-# Reload .bashrc file
-RUN . ~/.bashrc;
-
-ENTRYPOINT ["/bin/bash", "-c", "crux"]
+ENTRYPOINT ["crux"]
