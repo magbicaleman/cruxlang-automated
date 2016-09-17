@@ -24,8 +24,12 @@ RUN cd && \
 	stack install && \
 	stack test
 
+# Move critical compilation files
 RUN cd && \
-	rm -rf ./* && \
+	mv ./crux/rts/ ~/.local/bin/rts/ && \
+	mv ./crux/lib/ ~/.local/bin/lib/ && \
+	mv ./crux/cxconfig.yaml ~/.local/bin/cxconfig.yaml && \
+	rm -rf ./crux/* && \
 	ln -s ~/.local/bin/crux /usr/local/bin/crux
 
 ENTRYPOINT ["crux"]
