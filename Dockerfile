@@ -27,3 +27,4 @@ RUN cd && \
 RUN cd && \
 	rm -rf ./*
 
+CMD ['crux']
