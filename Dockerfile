@@ -28,4 +28,3 @@ RUN cd && \
 RUN cd && \
 	rm -rf ./*
 
-CMD ['~/.local/bin/crux']
