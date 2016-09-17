@@ -24,9 +24,9 @@ RUN cd && \
 	stack install && \
 	stack test
 
-# Clean root directory
 RUN cd && \
-	rm -rf ./*
+	rm -rf ./* && \
+	ln -s ~/.local/bin/crux /usr/local/bin/crux
 
 # Reload .bashrc file
 RUN . ~/.bashrc;
