@@ -27,4 +27,4 @@ RUN cd && \
 RUN cd && \
 	rm -rf ./*
 
-CMD ['crux']
+CMD ['~/.local/bin/crux']
