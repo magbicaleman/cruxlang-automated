@@ -16,3 +16,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 575159689B
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 	apt-get install -y nodejs
 
+# Clone CruxLang, install and test
+RUN cd && \
+	git clone ${CRUX_GIT} && \
+	cd crux && \
+	stack install && \
+	stack test
