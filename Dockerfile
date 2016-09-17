@@ -1,6 +1,7 @@
 FROM haskell:7.10.2
 
 ENV CRUX_GIT 'https://github.com/cruxlang/crux'
+ENV PATH=$PATH:~/.local/bin
 
 # Download OS dependencies and clean
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 575159689BEFB442 && \
