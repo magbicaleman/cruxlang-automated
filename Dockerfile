@@ -28,3 +28,7 @@ RUN cd && \
 RUN cd && \
 	rm -rf ./*
 
+# Reload .bashrc file
+RUN . ~/.bashrc;
+
+ENTRYPOINT ["/bin/bash", "-c", "crux"]
