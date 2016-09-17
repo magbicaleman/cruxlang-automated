@@ -22,3 +22,8 @@ RUN cd && \
 	cd crux && \
 	stack install && \
 	stack test
+
+# Clean root directory
+RUN cd && \
+	rm -rf ./*
+
